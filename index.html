@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Resume Analyzer</title>
+
+  <!-- PDF.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+
+  <!-- Mammoth (DOCX) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.2/mammoth.browser.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>📄 AI Resume Analyzer</h1>
+  <p>Upload your resume or paste content and get smart suggestions</p>
+
+  <input type="file" id="fileInput" accept=".txt,.pdf,.doc,.docx">
+
+  <textarea id="resume" placeholder="Paste resume here..."></textarea>
+
+  <select id="role">
+    <option value="">Select Job Role</option>
+    <option value="web">Web Developer</option>
+    <option value="data">Data Analyst</option>
+    <option value="software">Software Engineer</option>
+  </select>
+
+  <button onclick="analyzeResume()">Analyze Resume</button>
+
+  <div id="output" class="result-box"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
